@@ -30,8 +30,12 @@ button.newGameButton {
 }
 
 button.toBenchButton {
+  background-image: url("images/bench.png");
+  background-size: 55px 55px;
+  height: 60px;
+  width: 60px;
   padding:5px 25px; /*add some padding to the inside of the button*/
-  background:#ee3333; /*the colour of the button*/
+  /*background:#ee3333;*/ /*the colour of the button*/
   border:1px solid #33842a; /*required or the default border for the browser will appear*/
   /*give the button curved corners, alter the size as required*/
   -moz-border-radius: 10px;
@@ -47,8 +51,12 @@ button.toBenchButton {
 }
 
 button.enterGameButton {
+  background-image: url("images/ingame2.png");
+  background-size: 55px 55px;
+  height: 60px;
+  width: 60px;
   padding:5px 25px; /*add some padding to the inside of the button*/
-  background:#35b128; /*the colour of the button*/
+  /*background:#35b128; *//*the colour of the button*/
   border:1px solid #33842a; /*required or the default border for the browser will appear*/
   /*give the button curved corners, alter the size as required*/
   -moz-border-radius: 10px;
@@ -64,8 +72,12 @@ button.enterGameButton {
 }
 
 button.toInactiveButton {
+  background-image: url("images/inactive1.png");
+  background-size: 55px 55px;
+  height: 60px;
+  width: 60px;
   padding:5px 25px; /*add some padding to the inside of the button*/
-  background:#111111; /*the colour of the button*/
+  /*background:#111111;*/ /*the colour of the button*/
   border:1px solid #33842a; /*required or the default border for the browser will appear*/
   /*give the button curved corners, alter the size as required*/
   -moz-border-radius: 10px;
