@@ -1,0 +1,83 @@
+<head>
+  <title>subify</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>subify</h1>
+      <h2>making substitutions a snap</h2>
+      <hr>
+    </header>
+
+    <h1 class="gameTime">{{displayRunningTime}}</h1>
+    <button class="startClock">Start</button>
+
+    <h2>In Game</h2>
+    <table style="width:100%">
+      <tr>
+        <th>Name</th>
+        <th>Playing Time</th>
+        <th>Bench Time</th>
+        <th>Options</th>
+      </tr>
+      {{#each playersInGame}}
+        {{> inGamePlayer}}
+      {{/each}}
+    </table>
+
+    <h2>On Bench</h2>
+    <table style="width:100%">
+      <tr>
+        <th>Name</th>
+        <th>Playing Time</th>
+        <th>Bench Time</th>
+        <th>Options</th>
+      </tr>
+      {{#each playersOnBench}}
+        {{> benchPlayer}}
+      {{/each}}
+    </table>
+
+    <h2>InActive / Injured</h2>
+    <table style="width:100%">
+      <tr>
+        <th>Name</th>
+        <th>Playing Time</th>
+        <th>Bench Time</th>
+        <th>Options</th>
+      </tr>
+      {{#each playersInjured}}
+        {{> injuredPlayer}}
+      {{/each}}
+    </table>
+  </div>
+</body>
+
+<template name="inGamePlayer">
+  <tr>
+    <td>{{name}}</td>
+    <td>{{playingTimeFormatted}}</td>
+    <td>{{benchTimeFormatted}}</td>
+    <td><button class="toBenchButton">To BENCH</button> <button class="toInactiveButton">To INACTIVE</button></td>
+  </tr>
+</template>
+
+<template name="benchPlayer">
+  <tr>
+    <td>{{name}}</td>
+    <td>{{playingTimeFormatted}}</td>
+    <td>{{benchTimeFormatted}}</td>
+    <td><button class="enterGameButton">Send IN</button><button class="toInactiveButton">To INACTIVE</button></td>
+  </tr>
+</template>
+
+<template name="injuredPlayer">
+  <tr>
+    <td>{{name}}</td>
+    <td>{{playingTimeFormatted}}</td>
+    <td>{{benchTimeFormatted}}</td>
+    <td><button class="toBenchButton">To BENCH</button></td>
+  </tr>
+</template>

@@ -1,0 +1,4 @@
+Reset button; otherwise keep state on server
+Do Substitution (N)
+Add toInactive button on bench
+Button color - red vs. green
