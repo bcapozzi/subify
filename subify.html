@@ -53,6 +53,23 @@
       {{/each}}
     </table>
   </div>
+
+  <div id="code_container">
+  <script id='code_1'>
+				$(function() {
+					//Enable swiping...
+					$("#test").swipe( {
+						//Generic swipe handler for all directions
+						swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+							$(this).text("You swiped " + direction );
+						},
+						//Default is 75px, set to 0 for demo so any distance triggers swipe
+					   threshold:75
+					});
+				});
+			</script>
+  </div>
+  <div id="test" class="box">Swipe Me</div>
 </body>
 
 <template name="inGamePlayer">
@@ -79,6 +96,6 @@
     <td>{{name}}</td>
     <td>{{playingTimeFormatted}}</td>
     <td>{{benchTimeFormatted}}</td>
-    <td><button class="toBenchButton">To BENCH</button></td>
+    <td><button class="toBenchButton"></button></td>
   </tr>
 </template>
